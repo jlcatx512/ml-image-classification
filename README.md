@@ -3,7 +3,7 @@
 ## What are you wearing? 
 <img width=75% src="static/images/fashion-mnist_long.png">
 
-Our team project is to create a [machine learning image classification model](https://www.analyticsvidhya.com/blog/2019/01/build-image-classification-model-10-minutes/) inspired by the ["hot dog not hot dog" model](https://www.engadget.com/2017/05/15/not-hotdog-app-hbo-silicon-valley/) featured on the HBO television show [Silicon Valley](https://www.hbo.com/silicon-valley).
+Our team project is to create a [machine learning image classification model](https://www.analyticsvidhya.com/blog/2019/01/build-image-classification-model-10-minutes/) inspired by the [Fashion mnist dataset](https://www.tensorflow.org/tutorials/keras/classification).
 
 Instead of hot dogs, we're planning to train our model on articles of clothing e.g. t-shirt, sweater, pants, sneakers, etc.
 
