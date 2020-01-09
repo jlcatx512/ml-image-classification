@@ -3,9 +3,7 @@
 ## What are you wearing? 
 <img width=75% src="static/images/fashion-mnist_long.png">
 
-Our team project is to create a [machine learning image classification model](https://www.analyticsvidhya.com/blog/2019/01/build-image-classification-model-10-minutes/) inspired by the [Fashion mnist dataset](https://www.tensorflow.org/tutorials/keras/classification).
-
-Instead of hot dogs, we're planning to train our model on articles of clothing e.g. t-shirt, sweater, pants, sneakers, etc.
+Our team project is to create a [machine learning image classification model](https://www.analyticsvidhya.com/blog/2019/01/build-image-classification-model-10-minutes/) inspired by the [Fashion mnist dataset](https://www.tensorflow.org/tutorials/keras/classification). We're planning to train our model on articles of clothing e.g. t-shirt, sweater, pants, sneakers, etc.
 
 ## Description of data source ##
 
