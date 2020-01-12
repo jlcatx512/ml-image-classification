@@ -62,6 +62,7 @@ def upload_file():
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
             file.save(filepath)
+            data["file"] = filepath
 
             # Load the saved image using Keras and resize it to the Xception
             # format of 299x299 pixels
@@ -95,17 +96,18 @@ def upload_file():
                 data["success"] = True
 
         return jsonify(data)
+        # return render_template("xx.html", data=data)
 
-    return '''
-    <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
-    <form method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value=Upload>
-    </form>
-    '''
-
+    return render_template("index.html")
+    # '''
+    # <!doctype html>
+    # <title>Upload new File</title>
+    # <h1>Upload new File</h1>
+    # <form method=post enctype=multipart/form-data>
+    #   <p><input type=file name=file>
+    #      <input type=submit value=Upload>
+    # </form>
+    # '''
 
 if __name__ == "__main__":
     app.run(debug=True)
