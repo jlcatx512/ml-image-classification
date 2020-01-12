@@ -10,7 +10,7 @@ from keras.applications.vgg19 import (VGG19, preprocess_input) # has been added
 #     Xception, preprocess_input, decode_predictions)
 from keras import backend as K
 
-from flask import Flask, request, redirect, url_for, jsonify
+from flask import Flask, request, redirect, url_for, jsonify, render_template
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
@@ -95,18 +95,20 @@ def upload_file():
                 # # indicate that the request was a success
                 data["success"] = True
 
-        return jsonify(data)
-        # return render_template("xx.html", data=data)
+        # return jsonify(data)
+        return render_template("results.html", data=data)
 
-    return render_template("index.html")
+    return render_template("index.html", data=data)
+
+    # return
     # '''
-    # <!doctype html>
-    # <title>Upload new File</title>
-    # <h1>Upload new File</h1>
-    # <form method=post enctype=multipart/form-data>
-    #   <p><input type=file name=file>
-    #      <input type=submit value=Upload>
-    # </form>
+    #     <!doctype html>
+    #     <title>Upload new File</title>
+    #     <h1>Upload new File</h1>
+    #     <form method=post enctype=multipart/form-data>
+    #     <p><input type=file name=file>
+    #         <input type=submit value=Upload>
+    #     </form>
     # '''
 
 if __name__ == "__main__":
