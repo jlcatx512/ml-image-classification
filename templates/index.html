@@ -4,15 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Machine Learning Image Classification</title>
 </head>
 
 <body>
-    <h1>Upload new File</h1>
-    <form method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value="Classify Me!"">
-    </form>
-    
+    <div class="container bg-light">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron">
+                    <h1 class="display-4">What are you wearing?</h1>
+                    <br>
+                    <p class="lead">Upload an image from one of the FIVE categories below.</p>
+                    <p class="lead">The classifier is only trained to identify images from those categories.</p cl>
+                    <hr class="my-4">
+                    <p class="h5">Step 1: Click on the Choose File button below to upload your image.</p c>
+                    <p class="lead">
+                        <form method=post enctype=multipart/form-data>
+                    </p>
+                    <label class="btn btn-block btn-info">
+                        <input type="file" name=file>
+                    </label>
+
+                    <!-- <p class="text-center"><input type=file button type="button" class="btn btn-info btn-block" name=file></p> -->
+                    <p class="h5">Step 2: Click on the Classify Your Image! button below to categorize your image.</p>
+                        <input type=submit button type="button" class="btn btn-success btn-lg btn-block" value="Classify Your Image!">
+                    </form>
+                    </p>
+                    </p>
+                    </div>
+    <div class="row">
+        <div class="col">
+    <div class="card-group">
+        <div class="card">
+          <img class="card-img-top" src="../static/images/pants_test.jpg" alt="pants example">
+          <div class="card-body">
+            <h5 class="card-title">pants</h5>
+            <a href="https://www.google.com/search?tbm=isch&q=pants" class="btn btn-outline-primary">Click to search for an image of pants</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="../static/images/purse_test.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">purse</h5>
+            <a href="https://www.google.com/search?tbm=isch&q=purse" class="btn btn-outline-primary">Click to search for an image of a purse</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="../static/images/skirt_test.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">skirt</h5>
+            <a href="https://www.google.com/search?tbm=isch&q=skirt" class="btn btn-outline-primary">Click to search for an image of a skirt</a>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top" src="../static/images/sneaker_test.jpg" alt="sneaker example">
+          <div class="card-body">
+            <h5 class="card-title">sneaker</h5>
+            <a href="https://www.google.com/search?tbm=isch&q=sneaker" class="btn btn-outline-primary">Click to search for an image of a sneaker</a>
+          </div>
+        </div>  
+        <div class="card">
+          <img class="card-img-top" src="../static/images/t-shirt_test.jpg" alt="t-shirt example">
+          <div class="card-body">
+            <h5 class="card-title">t-shirt</h5>
+            <a href="https://www.google.com/search?tbm=isch&q=t-shirt" class="btn btn-outline-primary">Click to search for an image of a t-shirt</a>
+          </div>
+        </div>
+    </div>
+    </div>
+</div>
+<!-- FOOTER! -->
+<!-- <footer class="site-footer bg-secondary text-light d-flex justify-content-center"> -->
+<footer class="site-footer d-flex justify-content-center">
+
+    <!-- <p class="mt-3">2019</p> -->
+
+    <p class="mt-3"><a href="https://github.com/jlcatx512/ml-image-classification">Project Repo</a></p>
+    <!-- <div class="container">
+    </div>class="footer-top" -->
+</footer>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- // Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { bg-dark }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... } -->
 </body>
 </html>
