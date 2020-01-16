@@ -10,10 +10,10 @@ from keras.applications.vgg19 import (VGG19, preprocess_input) # has been added
 #     Xception, preprocess_input, decode_predictions)
 from keras import backend as K
 
-from flask import Flask, request, redirect, url_for, jsonify
+from flask import Flask, request, redirect, url_for, jsonify, render_template
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app.config['UPLOAD_FOLDER'] = 'static/uploads'
 
 # model = None
 model_vgg19 = None # has been added
@@ -62,6 +62,13 @@ def upload_file():
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
             file.save(filepath)
+            data["file"] = filepath.replace('\\', '/')
+            data["filename"] = filename
+            data["uploadfolder"] = app.config['UPLOAD_FOLDER']
+            data["filepath"] = filepath
+
+# redirect flask. different route.
+# link anchor to / href.
 
             # Load the saved image using Keras and resize it to the Xception
             # format of 299x299 pixels
@@ -94,18 +101,19 @@ def upload_file():
                 # # indicate that the request was a success
                 data["success"] = True
 
-        return jsonify(data)
-
-    return '''
-    <!doctype html>
-    <title>Upload new File</title>
-    <h1>Upload new File</h1>
-    <form method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value=Upload>
-    </form>
-    '''
-
+        # return jsonify(data)
+        return render_template("results.html", data=data)
+    return render_template("index.html", data=data)
+    # return
+    # '''
+    #     <!doctype html>
+    #     <title>Upload new File</title>
+    #     <h1>Upload new File</h1>
+    #     <form method=post enctype=multipart/form-data>
+    #     <p><input type=file name=file>
+    #         <input type=submit value=Upload>
+    #     </form>
+    # '''
 
 if __name__ == "__main__":
     app.run(debug=True)
